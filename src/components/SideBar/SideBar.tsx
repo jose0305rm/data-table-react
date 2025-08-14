@@ -37,8 +37,7 @@ export default function SideBar() {
   return (
     <aside className="w-[85%] xl:w-80 mb-10 xl:mb-0 flex flex-col h-96 xl:h-screen bg-[#b8e05a] rounded-lg overflow-hidden xl:rounded-none overflow-y-auto">
       <nav>
-        <p className="flex justify-center text-2xl font-bold text-white bg-[#a1c44f] p-3 sticky top-0 z-10">
-        </p>
+
         <ul className="grid grid-cols-2 xl:grid-cols-1">
           {menuItems.map((item, index) => (
             <li key={index} className="bg-[#b8e05a]">

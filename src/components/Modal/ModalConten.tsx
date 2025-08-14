@@ -1,29 +1,27 @@
 export default function ModalConten() {
   const toolsItems = [
-    { href: "#dashboard", icon: "bi-person-fill", label: "Ventas" },
-    { href: "#perfil", icon: "bi-cart-dash-fill", label: "Negocios" },
-    { href: "#configuracion", icon: "bi-envelope-fill", label: "Compras" },
-    { href: "#ayuda", icon: "bi-people", label: "Clientes" },
-    { href: "#dashboard", icon: "bi-person-vcard", label: "Proovedores" },
-    { href: "#perfil", icon: "bi-pencil-square", label: "Equipo" },
-    { href: "#configuracion", icon: "bi-image-fill", label: "Suscriptores" },
-    { href: "#ayuda", icon: "bi-signpost-2-fill", label: "Productos" },
-    { href: "#configuracion", icon: "bi-gear-fill", label: "Noticias" },
-    { href: "#ayuda", icon: "bi-door-open-fill", label: "Eventos" },
-    { href: "#ayuda", icon: "bi-door-open-fill", label: "Consultas" },
+    { href: "#dashboard", icon: "bi-person-fill", label: "Mi Cuenta" },
+    { href: "#perfil", icon: "bi-cart-dash-fill", label: "Mi carrito" },
+    { href: "#configuracion", icon: "bi-envelope-fill", label: "Mis Mensajes" },
+    { href: "#ayuda", icon: "bi-people", label: "Mis Reuniones" },
+    { href: "#dashboard", icon: "bi-person-vcard", label: "Ver Perfil" },
+    { href: "#perfil", icon: "bi-pencil-square", label: "Editar Perfil" },
+    { href: "#configuracion", icon: "bi-image-fill", label: "Editar Fotos" },
+    { href: "#ayuda", icon: "bi-signpost-2-fill", label: "Mis Direcciones" },
+    { href: "#configuracion", icon: "bi-gear-fill", label: "Cambiar Clave" },
+    { href: "#ayuda", icon: "bi-door-open-fill", label: "Cerrar Sesión" },
   ];
 
   return (
-    <>
-      <aside className="w-[85%] xl:w-80 mb-10 xl:mb-0 flex flex-col h-96 rounded-lg overflow-hidden xl:rounded-none overflow-y-auto">
+    <div className="flex justify-center items-center w-full">
+      <aside className="w-[85%] xl:w-[500px] mb-10 xl:mb-0 flex flex-col h-62 rounded-lg overflow-hidden overflow-y-auto">
         <nav>
-          <p className="flex justify-center text-2xl font-bold text-white bg-[#a1c44f] p-3 sticky top-0 z-10"></p>
-          <ul className="grid grid-cols-2 xl:grid-cols-1">
+          <ul className="grid grid-cols-2 gap-4 justify-items-center">
             {toolsItems.map((item, index) => (
-              <li key={index} className="bg-[#b8e05a]">
+              <li key={index} className="w-full">
                 <a
                   href={item.href}
-                  className="flex items-center gap-3 text-white text-lg p-3 hover:bg-[#a4cc50] transition"
+                  className="flex items-center gap-3 text-gray-600 text-lg p-3 hover:bg-gray-300 transition rounded-lg w-full"
                 >
                   <i className={`bi ${item.icon}`}></i>
                   <span>{item.label}</span>
@@ -33,6 +31,6 @@ export default function ModalConten() {
           </ul>
         </nav>
       </aside>
-    </>
+    </div>
   );
 }
